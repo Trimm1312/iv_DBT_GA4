@@ -18,3 +18,10 @@ models:
     +materialized: view
     marts:
       +materialized: table
+vars:
+  ga4:
+    source_project: "set-ga-reporting.analytics_270752382" # Project that contains raw GA4 data
+    property_ids: [270752382] # Array of properties to process
+    start_date: "20231201" # Earliest date to load
+    static_incremental_days: 3 # Number of days to scan and reprocess on each run
+    query_parameter_exclusions: ["gclid","fbclid","_ga"] 
