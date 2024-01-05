@@ -8,7 +8,7 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-target-path: "target"  # directory which will store compiled SQL files
+target-path: "iv_GA4"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
@@ -20,7 +20,7 @@ models:
       +materialized: table
 vars:
   ga4:
-    source_project: "set-ga-reporting.analytics_270752382" # Project that contains raw GA4 data
+    source_project: "set-ga-reporting" # Project that contains raw GA4 data
     property_ids: [270752382] # Array of properties to process
     start_date: "20231201" # Earliest date to load
     static_incremental_days: 3 # Number of days to scan and reprocess on each run

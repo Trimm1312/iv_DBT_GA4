@@ -1,0 +1,67 @@
+{
+    "path_count": 290,
+    "parsed_path_count": 290,
+    "static_analysis_path_count": 56,
+    "static_analysis_parsed_path_count": 7,
+    "is_partial_parse_enabled": true,
+    "is_static_analysis_enabled": true,
+    "read_files_elapsed": 0.6242883261293173,
+    "load_macros_elapsed": 0.9140869309194386,
+    "parse_project_elapsed": 0.5085493959486485,
+    "patch_sources_elapsed": 0.00030407635495066643,
+    "process_manifest_elapsed": 0.051825433038175106,
+    "load_all_elapsed": 2.479124005883932,
+    "projects": [
+        {
+            "project_name": "ga4",
+            "elapsed": 0.48774380842223763,
+            "parsers": [
+                {
+                    "parser": "model",
+                    "elapsed": 0.40844671288505197,
+                    "parsed_path_count": 56
+                },
+                {
+                    "parser": "seed",
+                    "elapsed": 0.006788141094148159,
+                    "parsed_path_count": 1
+                },
+                {
+                    "parser": "doc",
+                    "elapsed": 0.0001176958903670311,
+                    "parsed_path_count": 1
+                },
+                {
+                    "parser": "test",
+                    "elapsed": 0.06421484611928463,
+                    "parsed_path_count": 26
+                }
+            ],
+            "parsed_path_count": 84
+        },
+        {
+            "project_name": "dbt_bigquery",
+            "elapsed": 0.0047818380407989025,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt",
+            "elapsed": 0.006019491236656904,
+            "parsers": [
+                {
+                    "parser": "doc",
+                    "elapsed": 0.0002631549723446369,
+                    "parsed_path_count": 1
+                }
+            ],
+            "parsed_path_count": 1
+        },
+        {
+            "project_name": "dbt_utils",
+            "elapsed": 0.006512011867016554,
+            "parsers": [],
+            "parsed_path_count": 0
+        }
+    ]
+}
