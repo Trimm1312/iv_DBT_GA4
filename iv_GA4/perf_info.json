@@ -1,33 +1,18 @@
 {
     "path_count": 290,
-    "parsed_path_count": 2,
-    "static_analysis_path_count": 1,
+    "parsed_path_count": 0,
+    "static_analysis_path_count": 0,
     "static_analysis_parsed_path_count": 0,
     "is_partial_parse_enabled": true,
     "is_static_analysis_enabled": true,
-    "read_files_elapsed": 0.27169148600660264,
-    "load_macros_elapsed": 0.0008478349773213267,
-    "parse_project_elapsed": 0.4086575200781226,
-    "patch_sources_elapsed": 1.447298564016819e-05,
-    "process_manifest_elapsed": 0.00046852207742631435,
-    "load_all_elapsed": 0.811621047090739,
+    "read_files_elapsed": 0.2719405529787764,
+    "load_all_elapsed": 0.4533278109738603,
     "projects": [
         {
             "project_name": "ga4",
-            "elapsed": 0.4046829459257424,
-            "parsers": [
-                {
-                    "parser": "model",
-                    "elapsed": 0.1192435659468174,
-                    "parsed_path_count": 1
-                },
-                {
-                    "parser": "test",
-                    "elapsed": 0.28542531409766525,
-                    "parsed_path_count": 1
-                }
-            ],
-            "parsed_path_count": 2
+            "elapsed": 0.0,
+            "parsers": [],
+            "parsed_path_count": 0
         },
         {
             "project_name": "dbt_bigquery",
