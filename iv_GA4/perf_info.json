@@ -5,8 +5,8 @@
     "static_analysis_parsed_path_count": 0,
     "is_partial_parse_enabled": true,
     "is_static_analysis_enabled": true,
-    "read_files_elapsed": 0.2719405529787764,
-    "load_all_elapsed": 0.4533278109738603,
+    "read_files_elapsed": 0.8911919560050592,
+    "load_all_elapsed": 1.0592513139126822,
     "projects": [
         {
             "project_name": "ga4",

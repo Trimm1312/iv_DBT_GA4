@@ -47,8 +47,15 @@ from `set-ga-reporting`.`iv_GA4`.`stg_ga4__event_page_view`
     group by 1,2,3
 )
 
+,
+join_conversions as (
+    select 
+        *
+    from page_engagement
+    left join `set-ga-reporting`.`iv_GA4`.`stg_ga4__page_conversions` using (page_key)
+)
 select
-    page_engagement.* except (page_key),
+    join_conversions.*  except (page_key),
     ifnull(scroll.scroll_events, 0) as scroll_events
-from page_engagement
+from join_conversions
 left join scroll using (event_date_dt, page_location, page_title)

@@ -24,6 +24,22 @@ select
     sum(session_partition_sum_engagement_time_msec) as sum_engaged_time_msec,
     min(session_number) as session_number
     
+        
+            , sum(view_item_count) as count_view_item
+        
+            , sum(add_to_cart_count) as count_add_to_cart
+        
+            , sum(begin_checkout_count) as count_begin_checkout
+        
+            , sum(complete_registration_count) as count_complete_registration
+        
+            , sum(add_payment_info_count) as count_add_payment_info
+        
+            , sum(subscribe_count) as count_subscribe
+        
+            , sum(purchase_count) as count_purchase
+        
+    
 from `set-ga-reporting`.`iv_GA4`.`fct_ga4__sessions_daily`
 group by 1,2,3
     );

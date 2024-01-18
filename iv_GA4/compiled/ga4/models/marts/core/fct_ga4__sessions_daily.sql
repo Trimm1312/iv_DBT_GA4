@@ -31,4 +31,27 @@ with session_metrics as (
     group by 1,2,3,4
 )
 
-    select * from session_metrics
+    ,
+    session_conversions as (
+    select * from `set-ga-reporting`.`iv_GA4`.`stg_ga4__session_conversions_daily`
+    where 1=1
+    
+            and session_partition_date in (current_date,date_sub(current_date, interval 1 day),date_sub(current_date, interval 2 day),date_sub(current_date, interval 3 day))
+    
+    ),
+    join_metrics_and_conversions as (
+        select 
+            session_metrics.client_key,
+            session_metrics.stream_id,
+            session_metrics.user_id,
+            session_metrics.session_partition_min_timestamp,
+            session_metrics.session_partition_count_page_views,
+            session_metrics.session_partition_sum_event_value_in_usd,
+            session_metrics.session_partition_max_session_engaged,
+            session_metrics.session_partition_sum_engagement_time_msec,
+            session_metrics.session_number,
+            session_conversions.*
+        from session_metrics left join session_conversions using (session_partition_key)
+    )
+
+    select * from join_metrics_and_conversions
